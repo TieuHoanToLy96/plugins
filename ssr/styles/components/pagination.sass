@@ -1,0 +1,47 @@
+.cus-pagination
+  a
+    color: var(--text)
+    font-size: 0.75rem
+  .ant-pagination-prev
+    margin: 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: .25rem 0px 0px .25rem;
+    line-height: 1;
+    padding: .5rem .75rem;
+    a
+      line-height: 1
+    
+  .ant-pagination-next
+    margin: 0;
+    border: 1px solid var(--color-border-light);
+    border-radius: 0px .25rem .25rem 0px;
+    line-height: 1;
+    border-left: none
+    padding: .5rem .75rem;
+    a
+      line-height: 1
+  .ant-pagination-item
+    margin: 0
+    margin-left: -1px
+    border: 1px solid var(--color-border-light);
+    // border-left: none
+    border-radius: 0px
+    &:last-child
+      border-right: none
+    &:hover
+      a
+        color: var(--color-primary-2)
+    
+  .ant-pagination-item-active
+    background: var(--color-primary-2)
+    border-color: var(--color-primary-2)
+    &:hover
+      a
+        color: var(--white)
+    
+    a
+      color: var(--white)
+
+  .ant-pagination-disabled
+    a
+      color: var(--text-light)

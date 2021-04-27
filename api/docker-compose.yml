@@ -1,0 +1,27 @@
+version: "2"
+services:
+  api:
+    container_name: api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .dev.env
+    command: iex -S mix phx.server
+    ports:
+      - "2904:4000"
+    environment:
+      PG_USERNAME: postgres
+      PG_PASSWORD: postgres
+      PG_HOST: api-db
+      PG_DB: api_dev
+    volumes:
+      - .:/app:cached
+    command: iex -S mix phx.server
+    networks:
+      - shared_network
+      - default
+  
+networks:
+ shared_network:
+   external:
+     name: pancake_network

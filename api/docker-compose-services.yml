@@ -1,0 +1,16 @@
+version: "2"
+services:
+  api-db:
+    image: postgres:9.6.5-alpine
+    container_name: api-db
+    ports:
+      - "5555:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: api_dev
+      PGDATA: /data/pgdata
+    volumes:
+      - ./data:/data:cached
+    networks:
+      - default

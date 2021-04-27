@@ -1,0 +1,33 @@
+.cus-table
+  .ant-table-bordered
+    .ant-table-container
+      border: none
+    table
+      border-right: none
+
+  .ant-table-content
+    table
+      border: 1px solid var(--color-border-light)
+    .ant-table-thead
+      background-color: var(--color-bg-primary)
+      .ant-table-cell
+        line-height: 1.5
+        border-bottom: 2px solid var(--color-border-light)
+        background: transparent
+        color: var(--color-text-dark)
+        font-weight: 500
+        padding: 10px 30px 10px 15px
+        border-right-color: var(--color-border-light) !important
+
+    .ant-table-tbody
+      .ant-table-placeholder
+        .ant-empty-image
+        .ant-table-cell
+          border-bottom: none
+      .ant-table-row
+        .ant-table-cell
+          border-bottom: none
+          border-top: 1px solid var(--color-border-light)
+          border-right-color: var(--color-border-light)
+          &:last-child
+            border-right: none
