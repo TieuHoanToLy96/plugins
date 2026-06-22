@@ -23,6 +23,7 @@ app.prepare().then(() => {
     res.redirect("/")
   })
   
+  
 
   server.get("/callback", Auth.handlePancakeIDCallback)
   server.get("/sites/:site_id/:path", Auth.checkin, (req, res) => handle(req, res))
